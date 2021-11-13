@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-4.4.1.js"></script> -->
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.1.min.js"></script>
+    <title>ビデオチャット/字幕/翻訳</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1011.0" data-gr-ext-installed="">
+
+    <div class="container">
+
+        <div class="video-area">
+
+            <!-- 上のやつ ================================ -->
+            <div class="head">
+
+                <div class="suga-area">
+                    <!-- <img class="suga" src="/public/src/suga.png" alt=""> -->
+                </div>
+
+                <div class="title">
+
+                    <h1 class="heading">菅ちゃん用ビデオチャットアプリ</h1>
+
+                    <div class="room-info">
+                        <pre class="messages" id="js-messages"></pre>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- 上のやつおわり ================================ -->
+
+            <div>
+                <span id="js-room-mode"></span>:
+                <input type="text" placeholder="ルームID" id="js-room-id">
+                <button id="js-join-trigger"> Join</button>
+                <button id="js-leave-trigger">Leave</button>
+            </div>
+
+            <div class="p2p-media">
+
+                <!-- 相手の画面 -->
+                <div class="remote-stream">
+                    <p>相手の画面</p>
+                    <div class="js-remote-streams" id="js-remote-streams"></div>
+
+                    <!-- 言語選択 -->
+                    <p>相手の話す言語を選択してください。</p>
+                    <select class="selectLang" id="theirLang">
+                        <option value="01">中文</option>
+                        <option value="02">English</option>
+                        <option value="03">日本語</option>
+                    </select>
+                    <!-- <input type="button" value="ボタン" /> -->
+                    <p>※2回連続してクリックしないでください。</p>
+                    <div id="their-selectedText">ここに選択された言語を表示</div>
+                </div>
+                <!-- 相手の画面ここまで -->
+
+                <!-- 自分の画面 -->
+                <div class="local-stream">
+                    <p>あなたの画面</p>
+                    <video class="js-local-stream" id="js-local-stream"></video>
+
+                    <!-- 言語選択 -->
+                    <p>あなたの話す言語を表示してください。</p>
+                    <select class="selectLang" id="myLang">
+                        <option value="01">中文</option>
+                        <option value="02">English</option>
+                        <option value="03">日本語</option>
+                    </select>
+                    <input id="voice-start" type="button" value=" 音声文字起こしスタート " onclick="getIndexNo();">
+                    <p>※2回連続してクリックしないでください。</p>
+                    <div id="your-selectedText">ここに選択された言語を表示</div>
+                </div>
+                <!-- 自分の画面ここまで -->
+
+            </div>
+
+        </div>
+
+        <div class="chat-area">
+
+            <!-- ================================ 音声文字起こし ================================ -->
+            <h2>音声文字起こし部分</h2>
+
+            <div class="text-area" id="text-area">
+
+                <div class="subtitle" id="subtitle">
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                    <div id="autotext" class="autotext">原文</div>
+                    <div id="translation" class="translation">翻訳文</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="meta" id="js-meta">
+
+        <!-- ================================ CDN読込 ================================ -->
+        <script src="/__/firebase/init.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/roudokuka/docs/roudokuka.min.js"></script>
+        <script src="//cdn.webrtc.ecl.ntt.com/skyway-4.4.1.js"></script>
+
+        <!-- ================================ JSファイル読込 ================================ -->
+        <!-- <script src="js/speak.js"></script> -->
+        <!-- <script src="../_shared/key.js"></script> -->
+        <script src="js/config.js"></script>
+        <script src="js/translate.js"></script>
+        <script src="js/key.js"></script>
+        <script src="js/video.js"></script>
+
+</body>
+
+</html>
