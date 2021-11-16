@@ -6,18 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <title>認証画面</title>
+  <title>Login</title>
 </head>
 
 <body>
   <div class="topContents">
-    <h1>聪明出于勤奋、天才在于积累</h1>
-    <p>ツォンミン チューユー チンフェン，ティエンツァイ ザイユー ジーレイ</p>
-    <p>cōng míng chū yú qín fèn 、 tiān cái zài yú jī lěi</p>
-    <p>賢さは勤勉な積み重ねの結果である</p>
-    <p>これは华罗庚という中国の数学者が書いた本の題名で、生まれつきの天才はおらず、勤勉な積み重ねが人を真に賢くし成功につながる、と教えた言葉です。</p>
-
-
+    <h1>Login</h1>
     <div id="firebaseui-auth-container"></div>
     <img src="./src/good_chinese_man.png" alt="">
   </div>
@@ -33,8 +27,6 @@
   <script src="./js/translate.js"></script>
 
   <script type="text/javascript">
-
-    // ================================ Firebase認証部分 ================================
     let ui = new firebaseui.auth.AuthUI(firebase.auth());
     let uiConfig = {
       callbacks: {
@@ -52,7 +44,6 @@
       ],
     };
     ui.start('#firebaseui-auth-container', uiConfig);
-
   </script>
 </body>
 

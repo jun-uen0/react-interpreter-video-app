@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(src/S-WM11.jpg);
+    /* background-image: url(src/S-WM11.jpg); */
     position: relative;
 }
 
@@ -25,114 +25,106 @@ html:before {
 }
 
 .suga {
-    width: 100%;
-    height: 100%;
-    /* border: solid; */
+  width: 100%;
+  height: 100%;
 }
 
 .title {
-    justify-content: right;
-    width: 80%;
-    /* border: solid; */
+  justify-content: right;
+  width: 80%;
 }
 
 .meta {
-    text-align: center;
-    font-size: .8rem;
-    color: white;
+  text-align: center;
+  font-size: .8rem;
+  color: white;
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    height: 50rem;
-    justify-content: space-around;
-    display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  height: 50rem;
+  justify-content: space-around;
+  display: flex;
 }
 
 .video {
-    border-radius: 12rem;
+  border-radius: 12rem;
 }
 
 .video-area {
-    width: 70%;
-    height: 100%;
-    /* border: solid; */
+  width: 70%;
+  height: 100%;
 }
 
 .chat-area {
-    width: 30%;
-    height: 100%;
-    /* border: solid; */
-    justify-content: center;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
 }
 
 .text-area {
-    background-color: rgba(255, 255, 255, 0.5); 
-    width: 100%;
-    height: 80%;
-    overflow: auto;
-    filter:blur();
-    border-radius: 5%;
-    /* border: solid; */
+  background-color: rgba(255, 255, 255, 0.5); 
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  filter:blur();
+  border-radius: 5%;
 }
 
 .p2p-media {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .p2p-media .remote-stream {
-    width: 50%;
-    height: 50%;
-    /* border: solid; */
+  width: 50%;
+  height: 50%;
 }
 
 .p2p-media .local-stream {
-    width: 50%;
-    height: 50%;
-    /* border: solid; */
+  width: 50%;
+  height: 50%;
 }
 .room-info {
-    /* border: solid; */
-    height: 5rem;
-    overflow: auto;
+  height: 5rem;
+  overflow: auto;
 }
 
 .local-stream {
-    width: 100%;
+  width: 100%;
 }
 
 .js-local-stream {
-    width: 80%;
-    border-radius: 1rem;
+  width: 80%;
+  border-radius: 1rem;
 }
 
 .remote-stream {
-    width: 100%;
+  width: 100%;
 }
 
 .js-remote-stream {
-    width: 80%;
-    border-radius: 1rem;
+  width: 80%;
+  border-radius: 1rem;
 }
 
 
 video {
-    width: 80%;
-    border-radius: 1rem;
+  width: 80%;
+  border-radius: 1rem;
 }
 
 .autotext {
-    padding-top: 3%;
-    padding-right: 5%;
-    text-align: right;
-    color: black;
+  padding-top: 3%;
+  padding-right: 5%;
+  text-align: right;
+  color: black;
 }
 
 .translation {
-    padding-right: 5%;
-    text-align: right;
-    color: black;
+  padding-right: 5%;
+  text-align: right;
+  color: black;
 }
