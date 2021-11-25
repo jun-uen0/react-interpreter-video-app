@@ -4,7 +4,8 @@
 }
 
 body {
-    background-image: url(src/S-WM11.jpg);
+    /* background-image: url(src/S-WM11.jpg); */
+    background: #ffffe0;
     position: relative;
 }
 
