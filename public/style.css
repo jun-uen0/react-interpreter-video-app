@@ -1,0 +1,130 @@
+* {
+    background-size: cover;
+    /* color: #ffffff; */
+    text-align: center;
+}
+
+body {
+    /* background-image: url(src/S-WM11.jpg); */
+    position: relative;
+}
+
+html:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(245, 245, 245, 0.844);
+}
+
+.head {
+    width: 100%;
+    /* border: solid; */
+}
+
+.suga {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  justify-content: right;
+  width: 80%;
+}
+
+.meta {
+  text-align: center;
+  font-size: .8rem;
+  color: white;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  height: 50rem;
+  justify-content: space-around;
+  display: flex;
+}
+
+.video {
+  border-radius: 12rem;
+}
+
+.video-area {
+  width: 70%;
+  height: 100%;
+}
+
+.chat-area {
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+}
+
+.text-area {
+  background-color: rgba(255, 255, 255, 0.5); 
+  width: 100%;
+  height: 80%;
+  overflow: auto;
+  filter:blur();
+  border-radius: 5%;
+}
+
+.p2p-media {
+  display: flex;
+  justify-content: center;
+}
+
+.p2p-media .remote-stream {
+  width: 50%;
+  height: 50%;
+}
+
+.p2p-media .local-stream {
+  width: 50%;
+  height: 50%;
+}
+.room-info {
+  height: 5rem;
+  overflow: auto;
+}
+
+.local-stream {
+  width: 100%;
+}
+
+.js-local-stream {
+  width: 80%;
+  border-radius: 1rem;
+}
+
+.remote-stream {
+  width: 100%;
+}
+
+.js-remote-stream {
+  width: 80%;
+  border-radius: 1rem;
+}
+
+
+video {
+  width: 80%;
+  border-radius: 1rem;
+}
+
+.autotext {
+  padding-top: 3%;
+  padding-right: 5%;
+  text-align: right;
+  color: black;
+}
+
+.translation {
+  padding-right: 5%;
+  text-align: right;
+  color: black;
+}

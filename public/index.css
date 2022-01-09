@@ -1,0 +1,19 @@
+* {
+    /* background-size: cover; */
+    text-align: center;
+}
+
+body {
+    /* background-image: url(src/S-WM11.jpg); */
+    background: #ebebe4;
+    position: relative;
+}
+
+html:before {
+    content: '';
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
